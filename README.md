@@ -1,4 +1,5 @@
-Basically, my customized Angular CLI templates
+Basically, my customized Angular CLI templates.
+
 That's **not the best practice to follow** but the easiest/fastest clue for now; may evolve it later
 
 Basically, you make sure angular-cli is installed, clone me & overwrite `@schematics/angular`, e.g:
