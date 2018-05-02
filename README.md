@@ -2,16 +2,31 @@ Basically, my customized Angular CLI templates.
 
 That's **not the best practice to follow** but the easiest/fastest clue for now; may evolve it later
 
+
+# Setup
+
+### Requirements
+
++ [Node & NPM](https://github.com/nodejs/help/wiki/Installation)
++ `npm i -g @angular/cli`
+
+### Overwriting originals
 Basically, you make sure angular-cli is installed, clone me & overwrite `@schematics/angular`, e.g:
 ```bash
-cp -R * /usr/local/lib/node_modules/@angular/cli/node_modules/@schematics/angular #macOS, differ on other OS
+GLOBAL_NODEJS_PACKAGES=$(npm root -g)
+cp -R * $GLOBAL_NODEJS_PACKAGES/@angular/cli/node_modules/@schematics/angular
 ```
+
+### New collection
 
 Alternatively, you can copy it as a new collection(s) w/out overwriting the original templates, e.g:
 ```bash
-cp -R * /usr/local/lib/node_modules/@angular/cli/node_modules/@custom/pug #macOS, differ on other OS
+GLOBAL_NODEJS_PACKAGES=$(npm root -g)
+COLLECTION_PATH='@custom/pug' #TODO: you may change it
+mkdir -p $GLOBAL_NODEJS_PACKAGES/@angular/cli/node_modules/$COLLECTION_PATH
+cp -R * $GLOBAL_NODEJS_PACKAGES/@angular/cli/node_modules/$COLLECTION_PATH
 # then pass the collection relative path (@custom/pug):
-ng new --collection=@custom/pug whateverApp
+ng new --collection=$COLLECTION_PATH
 ```
 
 ### ref:

@@ -1,1 +1,3 @@
-sudo cp -R . /usr/local/lib/node_modules/@angular/cli/node_modules/@custom/pug
+GLOBAL_NODEJS_PACKAGES=$(npm root -g)
+COLLECTION_PATH='@custom/pug'
+sudo cp -R . $GLOBAL_NODEJS_PACKAGES/@angular/cli/node_modules/$COLLECTION_PATH
