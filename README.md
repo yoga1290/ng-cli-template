@@ -24,7 +24,11 @@ Alternatively, you can copy it as a new collection(s) w/out overwriting the orig
 GLOBAL_NODEJS_PACKAGES=$(npm root -g)
 COLLECTION_PATH='@custom/pug' #TODO: you may change it
 mkdir -p $GLOBAL_NODEJS_PACKAGES/@angular/cli/node_modules/$COLLECTION_PATH
-cp -R * $GLOBAL_NODEJS_PACKAGES/@angular/cli/node_modules/$COLLECTION_PATH
+
+# copy original templates
+sudo cp -R $GLOBAL_NODEJS_PACKAGES/@angular/cli/node_modules/@schematics/angular/* $GLOBAL_NODEJS_PACKAGES/@angular/cli/node_modules/$COLLECTION_PATH
+# overwrite them
+sudo cp -R * $GLOBAL_NODEJS_PACKAGES/@angular/cli/node_modules/$COLLECTION_PATH
 # then pass the collection relative path (@custom/pug):
 ng new --collection=$COLLECTION_PATH
 ```
