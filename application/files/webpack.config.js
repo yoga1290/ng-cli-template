@@ -6,6 +6,12 @@ const webpack = require('webpack')
 const merge = require('webpack-merge')
 const angularWPConfig = require('./webpack.angular.js')
 
+
+const VaadinIconsPath = path.join(__dirname, 'node_modules', 'vaadin-icons', 'assets', 'fonts')
+const MaterialIconsPath = path.join(__dirname, 'node_modules', 'material-design-icons', 'iconfont')
+const BootstrapPath = path.join(__dirname, 'node_modules', 'bootstrap', 'dist', 'css')
+
+
 var config = {
 
 // https://webpack.js.org/configuration/plugins/#plugins
@@ -15,6 +21,15 @@ var config = {
     "extensions": [ '.ts', '.tsx', ".js", ".json", ".styl"],
     // "extensions": [".styl"],
     alias: {
+      'Vaadin-Icons.eot': path.join(VaadinIconsPath, 'Vaadin-Icons.eot'),
+      'Vaadin-Icons.woff': path.join(VaadinIconsPath, 'Vaadin-Icons.woff'),
+      'Vaadin-Icons.ttf': path.join(VaadinIconsPath, 'Vaadin-Icons.ttf'),
+      'Vaadin-Icons.svg': path.join(VaadinIconsPath, 'Vaadin-Icons.svg'),
+
+      'MaterialIcons-Regular.eot': path.join(MaterialIconsPath, 'MaterialIcons-Regular.eot'),
+      'MaterialIcons-Regular.woff2': path.join(MaterialIconsPath, 'MaterialIcons-Regular.woff2'),
+      'MaterialIcons-Regular.woff': path.join(MaterialIconsPath, 'MaterialIcons-Regular.woff'),
+      'MaterialIcons-Regular.ttf': path.join(MaterialIconsPath, 'MaterialIcons-Regular.ttf')
     }
   },
 

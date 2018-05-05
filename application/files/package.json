@@ -55,6 +55,7 @@
     "karma-jasmine": "~1.1.0",
     "karma-jasmine-html-reporter": "^0.2.2",
     "less-loader": "^4.0.5",
+    "material-design-icons": "^3.0.1",
     "postcss-import": "^11.0.0",
     "postcss-loader": "^2.0.10",
     "postcss-url": "^7.1.2",
@@ -71,6 +72,7 @@
     "typescript": "~2.5.3",
     "uglifyjs-webpack-plugin": "^1.1.8",
     "url-loader": "^0.6.2",
+    "vaadin-icons": "^4.1.1",
     "webpack": "~3.11.0",
     "webpack-dev-server": "~2.11.0"
   }

@@ -1,0 +1,68 @@
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+@import 'bootstrap/dist/css/bootstrap.min.css';
+/* https://getbootstrap.com/docs/4.1/getting-started/webpack/#importing-compiled-css */
+
+
+/* https://google.github.io/material-design-icons/#icon-font-for-the-web */
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: local('Material Icons'),
+    local('MaterialIcons-Regular'),
+    url(MaterialIcons-Regular.woff2) format('woff2'),
+    url(MaterialIcons-Regular.woff) format('woff'),
+    url(MaterialIcons-Regular.ttf) format('truetype');
+}
+
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+
+
+
+/* https://vaadin.com/icons/download#download */
+@font-face {
+    font-family: 'Vaadin-Icons';
+    src: url('Vaadin-Icons.eot');
+    src: url('Vaadin-Icons.eot?#iefix') format('embedded-opentype'),
+         url('Vaadin-Icons.woff') format('woff'),
+         url('Vaadin-Icons.ttf') format('truetype'),
+         url('Vaadin-Icons.svg#icomoon') format('svg');
+}
+.icon {
+  font-family: Vaadin-Icons;
+  font-size: 16px;
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  font-style: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
