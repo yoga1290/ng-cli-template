@@ -1,4 +1,4 @@
-import { Component, OnInit<% if(!!viewEncapsulation) { %>, ViewEncapsulation<% }%><% if(changeDetection !== 'Default') { %>, ChangeDetectionStrategy<% }%> } from '@angular/core';
+import { Component, Output, EventEmitter, AfterViewInit, OnInit<% if(!!viewEncapsulation) { %>, ViewEncapsulation<% }%><% if(changeDetection !== 'Default') { %>, ChangeDetectionStrategy<% }%> } from '@angular/core';
 
 @Component({
   selector: '<%= selector %>',<% if(inlineTemplate) { %>
@@ -13,11 +13,19 @@ import { Component, OnInit<% if(!!viewEncapsulation) { %>, ViewEncapsulation<% }
   encapsulation: ViewEncapsulation.<%= viewEncapsulation %><% } if (changeDetection !== 'Default') { %>,
   changeDetection: ChangeDetectionStrategy.<%= changeDetection %><% } %>
 })
-export class <%= classify(name) %>Component implements OnInit {
+export class <%= classify(name) %>Component implements OnInit, AfterViewInit {
 
+/*
+//e.g:
+  @Input('myparameter') myparameter: Object = {}
+  @Output("myevent") myevent: EventEmitter<any> = new EventEmitter<any>()
+  // myevent.emit({mydata})
+*/
   constructor() { }
 
   ngOnInit() {
   }
 
+  ngAfterViewInit () {
+  }
 }
