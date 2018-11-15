@@ -1,0 +1,21 @@
+{
+  "name": "ng-cli-template",
+  "version": "1.0.0",
+  "description": "Basically, my customized Angular CLI templates.",
+  "main": "index.js",
+  "scripts": {
+    "install": "bash -x build.sh",
+    "start": "npm i",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yoga1290/ng-cli-template.git"
+  },
+  "author": "yoga1290",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yoga1290/ng-cli-template/issues"
+  },
+  "homepage": "https://github.com/yoga1290/ng-cli-template#readme"
+}
